@@ -11,7 +11,7 @@ For examples how to use, please refer to the examples folder.
 ```
 module "s3_object" {
 
-  source = "jason-morsley/aws-s3-object"
+  source = "jason-morsley/s3-object/aws" 
 
   bucket_name = "example-s3-bucket"
 
