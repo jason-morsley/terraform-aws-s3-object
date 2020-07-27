@@ -16,6 +16,7 @@
 module "s3_object" {
   
   source = "./../../../terraform-aws-s3-object"
+  #source = "jason-morsley/terraform-aws-s3-object"
 
   bucket_name = module.s3_bucket.name
 
