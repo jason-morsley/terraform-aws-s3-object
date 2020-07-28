@@ -14,17 +14,17 @@
 #                     |__/
 
 module "s3_object" {
-  
+
   source = "./../../../terraform-aws-s3-object"
-  #source = "jason-morsley/terraform-aws-s3-object"
+  #source = "jason-morsley/s3-object/aws"
 
   bucket_name = module.s3_bucket.name
 
-  key     = "Greeting"
-  content = "Hello, AWS! :)"
- 
-//  mock_depends_on = [
-//    module.s3_bucket.id
-//  ]
-  
+  key     = var.key
+  content = var.content
+
+  depends_on = [
+    module.s3_bucket
+  ]
+
 }

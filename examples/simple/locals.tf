@@ -7,6 +7,6 @@
 
 locals {
 
-  bucket_name = "simple-s3-object-example-${random_pet.this.id}"
+  bucket_name = "${var.bucket_name}-${random_pet.this.id}"
 
 }

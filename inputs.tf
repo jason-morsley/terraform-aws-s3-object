@@ -27,8 +27,3 @@ variable "content_type" {
   type        = string
   default     = "text/*"
 }
-
-variable "mock_depends_on" {
-  type    = any
-  default = null
-}
